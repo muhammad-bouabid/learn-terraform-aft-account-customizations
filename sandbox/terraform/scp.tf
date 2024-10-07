@@ -7,7 +7,7 @@ data "aws_iam_policy_document" "scp-allow-ec2-microType-only" {
 
     condition {
       test = "ForAnyValue:StringNotEquals"
-      values = "t2.micro"
+      values = ["t2.micro"]
       variable = "ec2:InstanceType"
     }
   }
